@@ -23,6 +23,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <title>Hello World</title>
     </head>
 	
@@ -35,10 +36,10 @@
                 <p class="status pending blink">Connecting to Device</p>
                 <p class="status complete blink hide">Device is Ready</p>
             </div>
-			
+			  <input type="text" name="ClientID" placeholder="Client ID"><br>
 			  <input type="text" name="fname" placeholder="First name"><br>
 			  <input type="text" name="lname" placeholder="Last name"><br>
-			  <input type="submit" value="Submit">
+			  <input type="submit" value="Submit" onclick="AuthendicateUser();>
 			
         </div>
 		
@@ -46,6 +47,32 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+			
+			var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
+			
+			function AuthendicateUser() {
+					//$("#MemberList").html('');
+					//$("#MemberList").addClass("loading");
+					$.ajax({
+						type: "POST",
+						url: serviceUrl,
+						data: "{}",
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: OnGetAllMembersSuccess,
+						error: OnGetAllMembersError
+					});
+				}
+
+				function OnGetAllMembersSuccess(data, status) {
+					alert('Success');
+					//jQuery code will go here...
+				}
+
+				function OnGetAllMembersError(request, status, error) {
+					alert('Fail');
+					//jQuery code will go here...
+				}
         </script>
 		
 	
