@@ -17,10 +17,11 @@
  * under the License.
  */
  
- var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
+ 
 			
-			$("#btnLogin").onclick(function() {
+			function AuthendicateUser() {
 			alert('test');
+			var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
 					$.ajax({
@@ -32,7 +33,7 @@
 						success: OnGetAllMembersSuccess,
 						error: OnGetAllMembersError
 					});
-				});
+				}
 
 				function OnGetAllMembersSuccess(data, status) {
 					alert('Success');
