@@ -19,7 +19,7 @@
  
  var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
 			
-			function AuthendicateUser() {
+			$("#btnLogin").onclick(function() {
 			alert('test');
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
@@ -32,7 +32,7 @@
 						success: OnGetAllMembersSuccess,
 						error: OnGetAllMembersError
 					});
-				}
+				});
 
 				function OnGetAllMembersSuccess(data, status) {
 					alert('Success');

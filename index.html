@@ -39,7 +39,7 @@
 			  <input type="text" name="ClientID" placeholder="Client ID"><br>
 			  <input type="text" name="Uname" placeholder="Username"><br>
 			  <input type="text" name="Pwd" placeholder="Password"><br>
-			  <input type="button" value="Submit" onclick="AuthendicateUser();>
+			  <input type="button" name="btnLogin" value="Submit">
 			
         </div>
 		
@@ -47,33 +47,6 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-			
-			var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
-			
-			function AuthendicateUser() {
-			alert('test');
-					//$("#MemberList").html('');
-					//$("#MemberList").addClass("loading");
-					$.ajax({
-						type: "GET",
-						url: serviceUrl,
-						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
-						contentType: "application/json; charset=utf-8",
-						dataType: "json",
-						success: OnGetAllMembersSuccess,
-						error: OnGetAllMembersError
-					});
-				}
-
-				function OnGetAllMembersSuccess(data, status) {
-					alert('Success');
-					//jQuery code will go here...
-				}
-
-				function OnGetAllMembersError(request, status, error) {
-					alert('Fail');
-					//jQuery code will go here...
-				}
         </script>
 		
 	
