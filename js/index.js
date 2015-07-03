@@ -31,7 +31,11 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
 						success: OnGetAllMembersSuccess,
-						error: OnGetAllMembersError
+						error: function(xhr) {
+							alert("readyState: "+xhr.readyState);
+					alert("status: "+xhr.status);
+					alert("responseText: "+xhr.responseText);
+							}
 					});
 				}
 
@@ -42,6 +46,7 @@
 
 				function OnGetAllMembersError(request, status, error) {
 					alert('Fail');
+					
 					//jQuery code will go here...
 				}
 				
