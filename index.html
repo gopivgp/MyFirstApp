@@ -39,7 +39,7 @@
 			  <input type="text" name="ClientID" placeholder="Client ID"><br>
 			  <input type="text" name="Uname" placeholder="Username"><br>
 			  <input type="text" name="Pwd" placeholder="Password"><br>
-			  <input type="submit" value="Submit" onclick="AuthendicateUser();>
+			  <input type="button" value="Submit" onclick="AuthendicateUser();>
 			
         </div>
 		
@@ -51,6 +51,7 @@
 			var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
 			
 			function AuthendicateUser() {
+			alert('test');
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
 					$.ajax({
