@@ -37,8 +37,8 @@
                 <p class="status complete blink hide">Device is Ready</p>
             </div>
 			  <input type="text" name="ClientID" placeholder="Client ID"><br>
-			  <input type="text" name="fname" placeholder="First name"><br>
-			  <input type="text" name="lname" placeholder="Last name"><br>
+			  <input type="text" name="Uname" placeholder="Username"><br>
+			  <input type="text" name="Pwd" placeholder="Password"><br>
 			  <input type="submit" value="Submit" onclick="AuthendicateUser();>
 			
         </div>
@@ -54,9 +54,9 @@
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
 					$.ajax({
-						type: "POST",
+						type: "GET",
 						url: serviceUrl,
-						data: "{}",
+						data: "un="+ $("#Uname").text() +" & pw="+ $("#Pwd").text() +" & client="+ $("#ClientID").text() +" & macaddress=1" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
 						success: OnGetAllMembersSuccess,
