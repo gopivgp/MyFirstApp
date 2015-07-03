@@ -16,6 +16,34 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+ var serviceUrl = 'http://192.168.1.100/HRService/LoginService.svc/AuthendicateUser';
+			
+			function AuthendicateUser() {
+			alert('test');
+					//$("#MemberList").html('');
+					//$("#MemberList").addClass("loading");
+					$.ajax({
+						type: "GET",
+						url: serviceUrl,
+						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: OnGetAllMembersSuccess,
+						error: OnGetAllMembersError
+					});
+				}
+
+				function OnGetAllMembersSuccess(data, status) {
+					alert('Success');
+					//jQuery code will go here...
+				}
+
+				function OnGetAllMembersError(request, status, error) {
+					alert('Fail');
+					//jQuery code will go here...
+				}
+				
 var app = {
     initialize: function() {
         this.bind();
