@@ -30,7 +30,12 @@
 						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
-						success: OnGetAllMembersSuccess,
+						success: function(xhr) {
+							alert(xhr);
+							alert("readyState: "+xhr.readyState);
+					alert("status: "+xhr.status);
+					alert("responseText: "+xhr.responseText);
+							},
 						error: function(xhr) {
 							alert("readyState: "+xhr.readyState);
 					alert("status: "+xhr.status);
