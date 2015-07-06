@@ -40,6 +40,7 @@
 				}
 
 				function OnGetAllMembersSuccess(data, status) {
+					alert(data);
 					alert('Success');
 					//jQuery code will go here...
 				}
