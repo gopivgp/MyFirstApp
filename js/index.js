@@ -20,8 +20,8 @@
  
 			
 			function AuthendicateUser() {
-			alert('test');
-			var serviceUrl = 'http://192.168.1.19/HRService/LoginService.svc/AuthendicateUser';
+			//alert('test');
+			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login';
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
 					$.ajax({
