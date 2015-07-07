@@ -27,6 +27,9 @@
 					var ClientID =  $('#ClientID').text();
 					var Uname = $('#Uname').text();
 					var Pwd = $('#Pwd').text();
+					alert(ClientID);
+					alert(Uname);
+					alert(Pwd);
 					$.ajax({
 						type: "POST",
 						url: "http://192.168.1.19/HRWebApi/api/login/" + Uname +  "/" + Pwd + "/" + ClientID + "/" + "1",
