@@ -26,8 +26,8 @@
 					//$("#MemberList").addClass("loading");
 					$.ajax({
 						type: "POST",
-						//url: "http://192.168.1.19/HRWebApi/api/login/" + $("#Uname").text() +  "/" + $("#Pwd").text() + "/" + $("#client").text() + "/" + $("#macaddress").text() ,
-						url : "http://192.168.1.19/HRWebApi/api/login/sally/sally/paytest1/mac1",
+						url: "http://192.168.1.19/HRWebApi/api/login/" + $('#Uname').text() +  "/" + $('#Pwd').text() + "/" + $('#ClientID').text() + "/" + $('#macaddress').text(),
+						//url : "http://192.168.1.19/HRWebApi/api/login/sally/sally/paytest1/mac1",
 						//url: serviceUrl,
 						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						data: "",
