@@ -22,26 +22,24 @@
 			function AuthendicateUser() {
 			//alert('test');
 			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/';
-					//$("#MemberList").html('');
-					//$("#MemberList").addClass("loading");
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $("#Pwd").val();
-					alert(ClientID1);
-					alert(Uname1);
-					alert(Pwd1);
 					$.ajax({
 						type: "POST",
-						url: "http://192.168.1.19/HRWebApi/api/login/" + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
-						//url : "http://192.168.1.19/HRWebApi/api/login/sally/sally/paytest1/mac1",
-						//url: serviceUrl,
-						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
+						url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
 						data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
-								alert(data);
-								alert('Success');
+								if(data == "SUCCESS")
+								{
+									alert("Login Success");
+								}
+								else
+								{
+									alert('Login Failed');
+								}								
 								//jQuery code will go here...
 							},
 						error: function(xhr) {
