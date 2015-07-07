@@ -21,14 +21,16 @@
 			
 			function AuthendicateUser() {
 			//alert('test');
-			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/';
+			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/AuthendicateUser';
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $("#Pwd").val();
 					$.ajax({
 						type: "POST",
-						url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
-						data: "",
+						//url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
+						url: serviceUrl,
+						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,
+						//data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
