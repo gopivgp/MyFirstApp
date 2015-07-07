@@ -26,13 +26,14 @@
 					//$("#MemberList").addClass("loading");
 					$.ajax({
 						type: "GET",
-						url: serviceUrl + '/' + $("#Uname").text() +  '/' + $("#Pwd").text() + '/' + $("#client").text() + '/' + $("#macaddress").text() ,
-						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
-						data: "",
+						//url: serviceUrl + '/' + $("#Uname").text() +  '/' + $("#Pwd").text() + '/' + $("#client").text() + '/' + $("#macaddress").text() ,
+						url: serviceUrl,
+						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
+						//data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
-								alert(data);
+								//alert(data);
 								alert('Success');
 								//jQuery code will go here...
 							},
