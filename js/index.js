@@ -24,9 +24,12 @@
 			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/';
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
+					var ClientID =  $('#ClientID').text();
+					var Uname = $('#Uname').text();
+					var Pwd = $('#Pwd').text();
 					$.ajax({
 						type: "POST",
-						url: "http://192.168.1.19/HRWebApi/api/login/" + $('#Uname').text() +  "/" + $('#Pwd').text() + "/" + $('#ClientID').text() + "/" + "1",
+						url: "http://192.168.1.19/HRWebApi/api/login/" + Uname +  "/" + Pwd + "/" + ClientID + "/" + "1",
 						//url : "http://192.168.1.19/HRWebApi/api/login/sally/sally/paytest1/mac1",
 						//url: serviceUrl,
 						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
