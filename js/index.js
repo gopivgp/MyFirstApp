@@ -35,6 +35,7 @@
 								if(data == "SUCCESS")
 								{
 									alert("Login Success");
+									window.open("Home.html");
 								}
 								else
 								{
