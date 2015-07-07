@@ -31,7 +31,7 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
 						success: function() {
-								alert(data.d);
+								alert(data);
 								alert('Success');
 								//jQuery code will go here...
 							},
