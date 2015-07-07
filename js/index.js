@@ -24,9 +24,9 @@
 			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/';
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
-					var ClientID =  $('#ClientID').text();
-					var Uname = $('#Uname').text();
-					var Pwd = $('#Pwd').text();
+					var ClientID =  $('#ClientID').val();
+					var Uname = $('#Uname').val();
+					var Pwd = $('#Pwd').val();
 					alert(ClientID);
 					alert(Uname);
 					alert(Pwd);
