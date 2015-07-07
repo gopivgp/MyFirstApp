@@ -30,7 +30,11 @@
 						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
-						success: OnGetAllMembersSuccess,
+						success: function(data) {
+								//alert(JSON.parse(data));
+								alert('Success');
+								//jQuery code will go here...
+							},
 						error: function(xhr) {
 							alert("readyState: "+xhr.readyState);
 							alert("status: "+xhr.status);
@@ -39,7 +43,7 @@
 					});
 				}
 
-				function OnGetAllMembersSuccess(data, status) {
+				function OnGetAllMembersSuccess(data) {
 					alert(JSON.parse(data));
 					alert('Success');
 					//jQuery code will go here...
