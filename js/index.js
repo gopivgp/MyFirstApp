@@ -21,13 +21,14 @@
 			
 			function AuthendicateUser() {
 			//alert('test');
-			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login';
+			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/login/';
 					//$("#MemberList").html('');
 					//$("#MemberList").addClass("loading");
 					$.ajax({
 						type: "GET",
-						url: serviceUrl,
-						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
+						url: serviceUrl + '/' + $("#Uname").text() +  '/' + $("#Pwd").text() + '/' + $("#client").text() + '/' + $("#macaddress").text() ,
+						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
+						data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
