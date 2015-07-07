@@ -26,7 +26,7 @@
 					//$("#MemberList").addClass("loading");
 					$.ajax({
 						type: "POST",
-						url: serviceUrl + '/' + $("#Uname").text() +  '/' + $("#Pwd").text() + '/' + $("#client").text() + '/' + $("#macaddress").text() ,
+						url: serviceUrl + "/" + $("#Uname").text() +  "/" + $("#Pwd").text() + "/" + $("#client").text() + "/" + $("#macaddress").text() ,
 						//url: serviceUrl,
 						//data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						data: "",
