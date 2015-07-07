@@ -30,8 +30,8 @@
 						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
-						success: function() {
-								alert(data.value);
+						success: function(data) {
+								//alert(data.d);
 								alert('Success');
 								//jQuery code will go here...
 							},
