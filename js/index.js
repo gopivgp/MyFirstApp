@@ -40,7 +40,7 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
-								//alert(data);
+								alert(data);
 								alert('Success');
 								//jQuery code will go here...
 							},
