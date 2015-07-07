@@ -15,8 +15,11 @@ $(document).ready(
 	<h1>Apply Leave</h1>
 </div>
 <div>
-	<input type="radio" name="LevType" value="Sick"><br>
-	<input type="radio" name="LevType" value="Casual">
+	<select name="LeaveType">
+                <option value="Sick">Sick</option>
+                <option value="Casual">Casual</option>
+                <option value="AnnualLeave">Annual Leave</option>                
+    </select>
 </div>
 <div>
 	<input type="label" name="LevBal" value="10">
@@ -28,8 +31,10 @@ $(document).ready(
 	<input type="date" name="ToDate">
 </div>
 <div>
-	<input type="radio" name="LevHalf" value="First Half"><br>
-	<input type="radio" name="LevHalf" value="Second Half">
+	<select name="HalfDayType">
+                <option value="First">First Half</option>
+                <option value="Second">Second Half</option>                
+    </select>
 </div>
 <div>
 	<input type="label" name="LevNODApplied" value="1">
