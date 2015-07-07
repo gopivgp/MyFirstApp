@@ -30,22 +30,17 @@
 						data: "{ 'un': '"+ $("#Uname").text() +"' , 'pw':'"+ $("#Pwd").text() +"', 'client':'"+ $("#ClientID").text() +"' , 'macaddress':'1'}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",
-						success: function(xhr) {
-							alert(xhr);
-							alert("readyState: "+xhr.readyState);
-					alert("status: "+xhr.status);
-					alert("responseText: "+xhr.responseText);
-							},
+						success: OnGetAllMembersSuccess,
 						error: function(xhr) {
 							alert("readyState: "+xhr.readyState);
-					alert("status: "+xhr.status);
-					alert("responseText: "+xhr.responseText);
+							alert("status: "+xhr.status);
+							alert("responseText: "+xhr.responseText);
 							}
 					});
 				}
 
 				function OnGetAllMembersSuccess(data, status) {
-					alert(data.name);
+					alert(JSON.parse(data));
 					alert('Success');
 					//jQuery code will go here...
 				}
