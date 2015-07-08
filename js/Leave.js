@@ -41,6 +41,8 @@
 									'comments':'',
 									'half_day_time':''
 									};
+									
+								alert('InsertLeaveParam'+InsertLeaveParam);
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
