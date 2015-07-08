@@ -26,7 +26,7 @@
 					//var Uname1 = $("#Uname").val();
 					//var Pwd1 = $("#Pwd").val();
 					var InsertLeaveParam =
-									[{
+									{
 									'id':'0',
 									'employee_no':'A003',
 									'from':'07/08/2015',
@@ -40,9 +40,9 @@
 									'client_id':'7821',
 									'comments':'',
 									'half_day_time':''
-									}];
+									};
 									
-								alert('InsertLeaveParam'+InsertLeaveParam[0].id);
+								alert('InsertLeaveParam'+InsertLeaveParam.id);
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
