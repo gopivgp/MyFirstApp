@@ -25,11 +25,13 @@
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $("#Pwd").val();
+					
+					var ParamArr = new Array();
 					$.ajax({
 						type: "POST",
 						//url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
 						url: serviceUrl,
-						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,
+						data: JSON.stringify({ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}) ,
 						//data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
