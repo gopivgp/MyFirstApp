@@ -37,7 +37,7 @@
 									'leave_type':'Casual Leave',
 									'status':'New',
 									'user':'sally',
-									'client_id':'7821',
+									'client_id':'paytest1',
 									'comments':'',
 									'half_day_time':''
 									};
