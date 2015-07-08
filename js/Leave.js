@@ -22,9 +22,9 @@
 			function ApplyLeave() {
 			//alert('test');
 			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/Leave';
-					var ClientID1 =  $("#ClientID").val();
-					var Uname1 = $("#Uname").val();
-					var Pwd1 = $("#Pwd").val();
+					//var ClientID1 =  $("#ClientID").val();
+					//var Uname1 = $("#Uname").val();
+					//var Pwd1 = $("#Pwd").val();
 					var InsertLeaveParam =
 									{
 									'id':'0',

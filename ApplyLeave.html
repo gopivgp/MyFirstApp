@@ -1,13 +1,22 @@
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
 $(document).ready(
 	function()
 	{
-	
+		$("#Submit").click( 
+			function()
+			{
+				ApplyLeave();
+			}
+		);
 	}
 );
 </script>
@@ -46,7 +55,7 @@ $(document).ready(
 	<input type="text" name="LevReason" >
 </div>
 <div>
-	<input type="Button" name="Submit" value="Submit" >
+	<input type="Button" id="Submit" value="Submit">
 </div>
 </body>
 </html>
