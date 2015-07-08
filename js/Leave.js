@@ -42,7 +42,7 @@
 									'half_day_time':''
 									};*/
 									
-								alert('InsertLeaveParam'+InsertLeaveParam.id);
+								
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
