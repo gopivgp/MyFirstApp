@@ -26,13 +26,12 @@
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $("#Pwd").val();
 					
-					//var ParamArr = "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}";
+					var ParamArr = ['un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'];
 					$.ajax({
-						type: "POST",
-						//url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
+						type: "POST",						
 						url: serviceUrl,
-						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,
-						//data: "",
+						//data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,						
+						data : ParamArr,
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
