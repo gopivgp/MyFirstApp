@@ -31,7 +31,7 @@
 						type: "POST",
 						//url: serviceUrl + Uname1 +  "/" + Pwd1 + "/" + ClientID1 + "/" + "1",
 						url: serviceUrl,
-						data: { 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'} ,
+						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,
 						//data: "",
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
