@@ -46,15 +46,14 @@
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
-						data: InsertLeaveParam ,						
+						//data: InsertLeaveParam ,						
 						data: "{'id':'0','employee_no':'A003','from':'07/08/2015','to':'07/08/2015','requested_days':'1','reason':'','half_day':'No','leave_type':'Casual Leave','status':'New','user':'sally','client_id':'paytest1','comments':'','half_day_time':''}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
 								if(data == "SUCCESS")
 								{
-									alert("Leave Applied Successfully.");
-									this.close();
+									alert("Leave Applied Successfully.");									
 									window.open("Home.html");
 								}
 								else
