@@ -25,7 +25,7 @@
 					//var ClientID1 =  $("#ClientID").val();
 					//var Uname1 = $("#Uname").val();
 					//var Pwd1 = $("#Pwd").val();
-					var InsertLeaveParam =
+					/*var InsertLeaveParam =
 									{
 									'id':'0',
 									'employee_no':'A003',
@@ -40,25 +40,26 @@
 									'client_id':'paytest1',
 									'comments':'',
 									'half_day_time':''
-									};
+									};*/
 									
 								alert('InsertLeaveParam'+InsertLeaveParam.id);
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
 						data: InsertLeaveParam ,						
-						data: "{'id':'0','employee_no':'A003','from':'07/08/2015','to':'07/08/2015','requested_days':'1','reason':'','half_day':'No','leave_type':'Casual Leave','status':'New','user':'sally','client_id':'7821','comments':'','half_day_time':''}" ,
+						data: "{'id':'0','employee_no':'A003','from':'07/08/2015','to':'07/08/2015','requested_days':'1','reason':'','half_day':'No','leave_type':'Casual Leave','status':'New','user':'sally','client_id':'paytest1','comments':'','half_day_time':''}" ,
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
 								if(data == "SUCCESS")
 								{
-									alert("Login Success");
+									alert("Leave Applied Successfully.");
+									this.close();
 									window.open("Home.html");
 								}
 								else
 								{
-									alert('Login Failed');
+									alert('Failed');
 								}								
 								//jQuery code will go here...
 							},
