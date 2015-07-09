@@ -32,10 +32,10 @@
 			
 				if (typeof(Storage) != "undefined") 
 				{	
-					alert(localStorage.getItem("ClientID"));
-					if (!(localStorage.getItem("ClientID") === null && localStorage.getItem("Uname") === null && localStorage.getItem("Pwd") === null))
+					alert(localStorage.getItem("lsClientID"));
+					if (localStorage.getItem("lsClientID") != null && localStorage.getItem("lsUname") != null && localStorage.getItem("lsPwd") != null)
 					{
-					alert('calling');
+						alert('calling');
 						AuthendicateUser();
 					}
 				}
