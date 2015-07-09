@@ -38,7 +38,7 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
-							//alert('data-'+data);
+							alert('data-'+data);
 								if(data == "SUCCESS")
 								{
 									//alert("Login Success");
