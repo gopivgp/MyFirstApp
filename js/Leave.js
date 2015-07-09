@@ -112,7 +112,7 @@
 								$("#tbl_LeaveApprovalList").html(a);
 								
 								$.each(jsonDS.Table1 , function (c, b) {
-									$("#tbl_LeaveApprovalListCount").innerHTML(b.Count);
+									$("#tbl_LeaveApprovalListCount").val(b.Count);
 					            });
 								
 								//alert(a);
