@@ -20,6 +20,15 @@ $(document).ready(
 				window.open("ApproveLeave.html");
 			}
 		);
+		$("#Signout").click(
+			function()
+			{
+				localStorage.setItem("lsClientID", "");
+				localStorage.setItem("lsUname", "");
+				localStorage.setItem("lsPwd", "");
+				window.open("index.html");
+			}
+		);
 	}
 );
 </script>
@@ -28,6 +37,9 @@ $(document).ready(
 </div>
 <div id="LevApprove">
 	<h1>Approve Leave</h1>
+</div>
+<div id="Signout">
+	<h1>Sign Out</h1>
 </div>
 </body>
 </html>

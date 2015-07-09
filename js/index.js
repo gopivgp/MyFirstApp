@@ -25,6 +25,7 @@
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $("#Pwd").val();
+					
 					//var ParamArr = new Array();
 					//var ParamArr = [{"'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'"}];
 					//var ParamArr = ["'"+ Uname1 +"' , '"+ Pwd1 +"', '"+ ClientID1 +"' ,'1'"];
@@ -36,10 +37,10 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
 						success: function(data) {
-							alert('data-'+data);
+							//alert('data-'+data);
 								if(data == "SUCCESS")
 								{
-									alert("Login Success");
+									//alert("Login Success");
 									window.open("Home.html");
 								}
 								else
