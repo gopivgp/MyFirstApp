@@ -24,15 +24,15 @@
 			var serviceUrl = 'http://192.168.1.19/HRWebApi/api/Login/Auth';
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
-					var Pwd1 = $("#Pwd").val();
-					
+					var Pwd1 = $.sha1($("#Pwd").val());
+					alert('Encrpted value'+Pwd1);
 					//var ParamArr = new Array();
 					//var ParamArr = [{"'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'"}];
 					//var ParamArr = ["'"+ Uname1 +"' , '"+ Pwd1 +"', '"+ ClientID1 +"' ,'1'"];
 					$.ajax({
 						type: "POST",						
 						url: serviceUrl,
-						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ $.sha1(Pwd1) +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,						
+						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,						
 						//data : ParamArr,
 						contentType: "application/json; charset=utf-8",
 						dataType: "",						
