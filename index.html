@@ -25,6 +25,41 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <title>Hello World</title>
+		<script>
+		$(document).ready(
+			function()
+			{
+			
+				if (typeof(Storage) != "undefined") 
+				{	
+					alert(localStorage.getItem("ClientID"));
+					if(localStorage.getItem("ClientID") != 'undefined' && localStorage.getItem("Uname") != 'undefined' && localStorage.getItem("Pwd") != 'undefined')
+					{
+						AuthendicateUser();
+					}
+				}
+			
+				$("#btnLogin").click( 
+					function()
+					{		
+						if (typeof(Storage) != "undefined") 
+						{						
+								// Store
+								localStorage.setItem("lsClientID", $("#ClientID").val());
+								localStorage.setItem("lsUname", $("#Uname").val());
+								localStorage.setItem("lsPwd", $("#Pwd").val());
+								// Retrieve
+								//document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+							} else {
+								alert("Sorry, your browser does not support Web Storage...");
+						}
+						AuthendicateUser();
+					}
+				);
+			}
+		);
+		</script>
+		
     </head>
 	
     <body>
@@ -39,7 +74,7 @@
 			  <input type="text" value="paytest1" id="ClientID" placeholder="Client ID" /><br />
 			  <input type="text" value="sally" id="Uname" placeholder="Username" /><br />
 			  <input type="text" value="sally" id="Pwd" placeholder="Password" /><br />
-			  <input type="button" name="btnLogin" value="Submit" onclick="AuthendicateUser()" />			
+			  <input type="button" id="btnLogin" value="Submit" />			
         </div>
 		
         <script type="text/javascript" src="phonegap.js"></script>
