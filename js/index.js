@@ -26,7 +26,7 @@
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $.sha1($("#Pwd").val());
 					//var Pwd1 = $("#Pwd").val();
-					alert('Encrpted value'+Pwd1);
+					//alert('Encrpted value'+Pwd1);
 					//var ParamArr = new Array();
 					//var ParamArr = [{"'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'"}];
 					//var ParamArr = ["'"+ Uname1 +"' , '"+ Pwd1 +"', '"+ ClientID1 +"' ,'1'"];
@@ -38,7 +38,7 @@
 						contentType: "application/json; charset=utf-8",
 						dataType: "JSON",						
 						success: function(data) {
-							alert('data-'+data);
+							//alert('data-'+data);
 								if(JSON.parse(data) == "SUCCESS")
 								{
 									//alert("Login Success");
