@@ -36,10 +36,10 @@
 						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,						
 						//data : ParamArr,
 						contentType: "application/json; charset=utf-8",
-						dataType: "",						
+						dataType: "JSON",						
 						success: function(data) {
 							alert('data-'+data);
-								if(data == "SUCCESS")
+								if(JSON.parse(data) == "SUCCESS")
 								{
 									//alert("Login Success");
 									window.open("Home.html");
