@@ -23,9 +23,9 @@ $(document).ready(
 		$("#Signout").click(
 			function()
 			{
-				localStorage.setItem("lsClientID", "");
-				localStorage.setItem("lsUname", "");
-				localStorage.setItem("lsPwd", "");
+				localStorage.removeItem("lsClientID");
+				localStorage.removeItem("lsUname");
+				localStorage.removeItem("lsPwd");
 				window.open("index.html");
 			}
 		);
