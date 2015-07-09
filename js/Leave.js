@@ -140,9 +140,10 @@
 								//$("#dvLeaveApproval").show();
 								//$("#tbl_LeaveApprovalList").show();
 								//clear_form_elements("#dvLeaveApproval")
+								alert(a);
 							},
 							error: function () {
-								ShowMsg("Data not loaded properly")
+								alert("Data not loaded properly");
 							}
 					});
 				}
