@@ -100,13 +100,22 @@
 						//contentType: "application/json; charset=utf-8",
 						dataType: "JSON",						
 						success: function (b) {	
-								alert(b)
-					            $.each($.parseJSON(b), function (c, b) {
-					                a += '<tr><td><a href=# onclick=javascript:LoadLeaveApprovalById("' + b.ID + '") class="btn-small-edit"><i class="btn-icon-only fa fa-pencil"></a></td><td>' + b.Employee_No + "</td><td>" + b.Employee_Name + "</td><td>" + b.From + "</td><td>" + b.To + "</td><td>" + b.Requested_Days + "</td></tr>"
+								//alert(b);
+								var jsonDS =  $.parseJSON(b);
+								
+					            $.each(jsonDS.Table , function (c, b) {
+									//$.each($.parseJSON(b), function (c, b) {
+										a += '<tr><td><a href=# onclick=javascript:LoadLeaveApprovalById("' + b.ID + '") class="btn-small-edit"><i class="btn-icon-only fa fa-pencil"></a></td><td>' + b.Employee_No + "</td><td>" + b.Employee_Name + "</td><td>" + b.From + "</td><td>" + b.To + "</td><td>" + b.Requested_Days + "</td></tr>"
+									//}
 					            });
 								a += " </tbody>";
 								$("#tbl_LeaveApprovalList").html(a);
-								alert(a);
+								
+								$.each(jsonDS.Table1 , function (c, b) {
+									$("#tbl_LeaveApprovalListCount").innerHTML(b.Count);
+					            });
+								
+								//alert(a);
 							},
 							error: function () {
 								alert("Data not loaded properly");
