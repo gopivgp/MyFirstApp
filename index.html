@@ -33,9 +33,9 @@
 				{						
 					if (localStorage.getItem("lsClientID") != null && localStorage.getItem("lsUname") != null && localStorage.getItem("lsPwd") != null)
 					{	
-						//$("#ClientID").val() = localStorage.getItem("lsClientID");
-						//$("#Uname").val() = localStorage.getItem("lsUname");
-						//$("#Pwd").val() = localStorage.getItem("lsPwd");
+						$("#ClientID").val(localStorage.getItem("lsClientID"));
+						$("#Uname").val(localStorage.getItem("lsUname"));
+						$("#Pwd").val(localStorage.getItem("lsPwd"));
 						AuthendicateUser();
 					}
 				}
