@@ -101,7 +101,7 @@
 						dataType: "JSON",						
 						success: function (b) {	
 								alert(b)
-					            $.each($.parseJSON(b.d), function (c, b) {
+					            $.each($.parseJSON(b), function (c, b) {
 					                a += '<tr><td><a href=# onclick=javascript:LoadLeaveApprovalById("' + b.ID + '") class="btn-small-edit"><i class="btn-icon-only fa fa-pencil"></a></td><td>' + b.Employee_No + "</td><td>" + b.Employee_Name + "</td><td>" + b.From + "</td><td>" + b.To + "</td><td>" + b.Requested_Days + "</td></tr>"
 					            });
 								a += " </tbody>";
