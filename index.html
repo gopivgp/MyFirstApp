@@ -31,9 +31,8 @@
 			{
 			
 				if (typeof(Storage) != "undefined") 
-				{	
-					alert(localStorage.getItem("ClientID"));
-					if(localStorage.getItem("ClientID") != 'undefined' && localStorage.getItem("Uname") != 'undefined' && localStorage.getItem("Pwd") != 'undefined')
+				{						
+					if(localStorage.getItem("ClientID") != null && localStorage.getItem("Uname") != null && localStorage.getItem("Pwd") != null)
 					{
 						AuthendicateUser();
 					}
