@@ -32,9 +32,10 @@
 			
 				if (typeof(Storage) != "undefined") 
 				{	
-					//alert(localStorage.getItem("ClientID"));
+					alert(localStorage.getItem("ClientID"));
 					if(localStorage.getItem("ClientID") != 'undefined' && localStorage.getItem("Uname") != 'undefined' && localStorage.getItem("Pwd") != 'undefined')
 					{
+					alert('calling');
 						AuthendicateUser();
 					}
 				}
