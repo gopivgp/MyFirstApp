@@ -22,7 +22,7 @@
 			function AuthendicateUser() {
 			//alert('test');
 			    			
-			    var serviceUrl = "http://localhost:80/HRWebApi/api/Login/Auth";
+			    var serviceUrl = "http://192.168.1.19/HRWebApi/api/Login/Auth";
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $.sha1($("#Pwd").val());
