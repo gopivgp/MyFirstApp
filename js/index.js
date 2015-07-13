@@ -21,7 +21,8 @@
 			
 			function AuthendicateUser() {
 			//alert('test');
-			var serviceUrl = 'http://192.168.1.19:8080/HRWebApi/api/Login/Auth';
+			    			
+			    var serviceUrl = "http://localhost:80/HRWebApi/api/Login/Auth";
 					var ClientID1 =  $("#ClientID").val();
 					var Uname1 = $("#Uname").val();
 					var Pwd1 = $.sha1($("#Pwd").val());
@@ -34,9 +35,10 @@
 						type: "POST",						
 						url: serviceUrl,
 						data: "{ 'un': '"+ Uname1 +"' , 'pw':'"+ Pwd1 +"', 'client':'"+ ClientID1 +"' , 'macaddress':'1'}" ,						
-						//data : ParamArr,
+						//data: { "un":""+ Uname1 + "" , "pw":"" + Pwd1 + "", "client":"" + ClientID1 + "" , "macaddress":"1"},						
+						//data: { "un": "sally", "pw": "sally", "client" : "paytest1", "macaddress": "1" },						
 						contentType: "application/json; charset=utf-8",
-						dataType: "JSON",						
+						dataType: "JSON",
 						success: function(data) {
 							//alert('data-'+data);
 								if(JSON.parse(data) == "SUCCESS")
